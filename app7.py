@@ -17,3 +17,6 @@ for meat in meats:
     print('Vê se não deixa queimar!\n')    
 
 print('\nAcabou')
+
+
+print('\Acabou')
