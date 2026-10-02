@@ -1,20 +1,17 @@
+#Programa para solicitar a senha para o usuário
 
-
-def somar_numeros():
-    soma = 0
-
+def solicitar_senha():
+    senha_correta = "2855"  # Defina a senha correta
     while True:
-        try:
-            numero = float(input("Digite um número (0 para sair): "))
-        except ValueError:
-            print("Entrada inválida! Digite apenas números.")
-            continue 
-        if numero == 0:
-            break  
-
-        soma += numero 
-
-    print(f"A soma dos números digitados é: {soma}")
+        senha = input("Digite a senha: ").strip()  # Remove espaços extras
+        if senha == senha_correta:
+            print("✅ Senha correta! Acesso concedido.")
+            break
+        else:
+            print("❌ Senha incorreta. Tente novamente.")
 
 if __name__ == "__main__":
-    somar_numeros()
+    try:
+        solicitar_senha()
+    except KeyboardInterrupt:
+        print("\nPrograma encerrado pelo usuário.")

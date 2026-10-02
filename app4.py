@@ -1,3 +1,7 @@
+# Usando métodos de 'strings'. Ex.: str.lower()
+
+import os
+
 # Define o valor das variáveis
 has_invitation = is_vip = False
 invited = age = vip = str()

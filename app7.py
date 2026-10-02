@@ -1,9 +1,11 @@
+# Tuplas
+
 import os
 
 os.system("cls")
 
-fruits = ('maçã', 'pera', 'uva', 'morango', 'kiwi', 'pitanga')
-meats = ('Acém', 'Músculo', 'Figado', 'Moela')
+fruits = ('maçã', 'pera', 'uva', 'morango', 'kiwi', 'pitanga',)
+meats = ('Acém')
 
 # print('-------------', fruits[5])
 
@@ -17,6 +19,3 @@ for meat in meats:
     print('Vê se não deixa queimar!\n')    
 
 print('\nAcabou')
-
-
-print('\Acabou')

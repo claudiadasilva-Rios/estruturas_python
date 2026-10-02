@@ -1,3 +1,4 @@
+# Tomando decisões com 'if elif else'
 
 age = 22
 has_invitation = False
@@ -13,3 +14,4 @@ else:
     print("Entrada não permitida") 
 
 print("Acabou")
+

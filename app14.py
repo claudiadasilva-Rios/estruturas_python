@@ -1,29 +1,48 @@
-# Programa para gerar a tabuada de um número de 1 a 10
+#  Programa para imprimir numeros de 1 até 10
+numeros = list(range(1, 11))
+for n in numeros:
+    print(n)
 
-def gerar_tabuada(numero):
-    """Gera e imprime a tabuada de 1 a 10 para o número fornecido."""
-    print(f"\nTabuada do {numero}:")
-    for i in range(1, 11):
+    print()
+
+    contador = 1
+    print()
+    print()
+
+# Programa para imprimir somente numeros pares até 20    
+for numero in range(2, 21, 2):
+    print(numero)
+    print()
+    print()
+
+# Programa para imprimir a tabuada do 5 de 1 a 10
+
+def tabuada(numero: int, inicio: int = 1, fim: int = 10):
+    """
+    Imprime a tabuada de 'numero' do intervalo [inicio, fim].
+    """
+ 
+    if not isinstance(numero, int) or not isinstance(inicio, int) or not isinstance(fim, int):
+        raise ValueError("Todos os parâmetros devem ser inteiros.")
+    if inicio > fim:
+        raise ValueError("O valor inicial deve ser menor ou igual ao final.")
+
+    for i in range(inicio, fim + 1):
         resultado = numero * i
         print(f"{numero} x {i} = {resultado}")
 
-def main():
-    try:
-        # Solicita o número ao usuário
-        entrada = input("Digite um número inteiro: ").strip()
-        
-        # Valida se é inteiro
-        if not entrada.lstrip('-').isdigit():
-            print("Erro: Você deve digitar um número inteiro válido.")
-            return
-        
-        numero = int(entrada)
-        
-        # Gera e exibe a tabuada
-        gerar_tabuada(numero)
-        
-    except Exception as e:
-        print(f"Ocorreu um erro inesperado: {e}")
-
 if __name__ == "__main__":
-    main()
+    try:
+        tabuada(5)  
+    except Exception as e:
+        print(f"Erro: {e}")
+        
+        print()
+        print()
+# Programa para imprimir numeros de 1 á 10        
+
+while contador <= 10:
+    print(f"Contador: {contador}")
+    contador += 1
+
+print()

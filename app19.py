@@ -1,29 +1,20 @@
-# Menu simples em Python
-def mostrar_menu():
-    """Exibe o menu no terminal."""
-    print("\n=== MENU ===")
-    print("1 - Olá")
-    print("2 - Python")
-    print("3 - Sair")
+#Programa para imprimir a soma dos numeros fornecidos
 
-def main():
+def somar_numeros():
+    soma = 0
+
     while True:
-        mostrar_menu()
         try:
-            opcao = int(input("Escolha uma opção (1-3): ").strip())
+            numero = float(input("Digite um número (0 para sair): "))
         except ValueError:
-            print("Entrada inválida! Digite um número entre 1 e 3.")
-            continue
+            print("Entrada inválida! Digite apenas números.")
+            continue 
+        if numero == 0:
+            break  
 
-        if opcao == 1:
-            print("Olá!")
-        elif opcao == 2:
-            print("Python")
-        elif opcao == 3:
-            print("Saindo... Até logo!")
-            break
-        else:
-            print("Opção inválida! Escolha entre 1 e 3.")
+        soma += numero 
+
+    print(f"A soma dos números digitados é: {soma}")
 
 if __name__ == "__main__":
-    main()
+    somar_numeros()

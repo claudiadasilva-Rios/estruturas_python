@@ -1,4 +1,4 @@
-# Tamanho do quadrado
+# Programa para imprimir o tamanho do quadrado
 linhas = 6
 colunas = 6
 

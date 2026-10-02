@@ -1,15 +1,23 @@
-def contagem_regressiva(inicio=10):
-   
-    if not isinstance(inicio, int) or inicio <= 0:
-        raise ValueError("O valor inicial deve ser um inteiro positivo.")
+# Programa para calcular a soma dos números de 1 a 100
 
-    numero = inicio
-    while numero >= 1:
-        print(numero)
-        numero -= 1  
+def soma_com_loop(inicio, fim):
+    soma = 0
+    for numero in range(inicio, fim + 1):
+        soma += numero
+    return soma
+
+def soma_com_formula(inicio, fim):
+    n = fim - inicio + 1
+    return n * (inicio + fim) // 2 
 
 if __name__ == "__main__":
-    try:
-        contagem_regressiva(10)
-    except ValueError as e:
-        print(f"Erro: {e}")
+    inicio = 1
+    fim = 100
+
+    # Cálculo com loop
+    soma_loop = soma_com_loop(inicio, fim)
+    print(f"Soma de {inicio} a {fim} (loop): {soma_loop}")
+
+    # Cálculo com fórmula
+    soma_formula = soma_com_formula(inicio, fim)
+    print(f"Soma de {inicio} a {fim} (fórmula): {soma_formula}")

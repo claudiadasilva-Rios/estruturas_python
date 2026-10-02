@@ -1,9 +1,29 @@
-hora = 0
+# Programa para imprimir um menu 
+def mostrar_menu():
+    """Exibe o menu no terminal."""
+    print("\n=== MENU ===")
+    print("1 - Olá")
+    print("2 - Python")
+    print("3 - Sair")
 
-while hora < 12:  # Loop das horas
-    minuto = 0
-    while minuto < 60:  # Loop dos minutos
-        print(f"{hora}:{minuto}")
-        minuto += 1
-    hora += 1
-    print(f"{hora}:{minuto:02}")
+def main():
+    while True:
+        mostrar_menu()
+        try:
+            opcao = int(input("Escolha uma opção (1-3): ").strip())
+        except ValueError:
+            print("Entrada inválida! Digite um número entre 1 e 3.")
+            continue
+
+        if opcao == 1:
+            print("Olá!")
+        elif opcao == 2:
+            print("Python")
+        elif opcao == 3:
+            print("Saindo... Até logo!")
+            break
+        else:
+            print("Opção inválida! Escolha entre 1 e 3.")
+
+if __name__ == "__main__":
+    main()
