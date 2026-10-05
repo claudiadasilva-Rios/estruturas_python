@@ -1,29 +1,45 @@
-# Programa para gerar a tabuada de um número de 1 a 10
+# Loop while
 
-def gerar_tabuada(numero):
-    """Gera e imprime a tabuada de 1 a 10 para o número fornecido."""
-    print(f"\nTabuada do {numero}:")
-    for i in range(1, 11):
-        resultado = numero * i
-        print(f"{numero} x {i} = {resultado}")
+#while True:
+   # print("looping") looping infinito
 
-def main():
-    try:
-        # Solicita o número ao usuário
-        entrada = input("Digite um número inteiro: ").strip()
-        
-        # Valida se é inteiro
-        if not entrada.lstrip('-').isdigit():
-            print("Erro: Você deve digitar um número inteiro válido.")
-            return
-        
-        numero = int(entrada)
-        
-        # Gera e exibe a tabuada
-        gerar_tabuada(numero)
-        
-    except Exception as e:
-        print(f"Ocorreu um erro inesperado: {e}")
 
-if __name__ == "__main__":
-    main()
+import os
+os.system('cls')
+
+while True:
+    os.system('cls')
+    print('''
+    1) Estou com fome
+    2) Estou com sede
+    3) Quero minha mãe
+
+    0) Sair
+    ''')
+
+    x = input("Escolha uma opção: ")
+
+
+    if x == '1':
+        print('Vai comer')
+        input('Tecle [Enter] para continuar.')
+        
+
+    if x == '2':
+         print('Vai beber água')
+         input('Tecle [Enter] para continuar.')
+       
+    if x == '3':
+         print('Vá vê lá')
+         input('Tecle [Enter] para continuar.')
+
+         # Nenhuma das opções acima é válida
+    
+
+    if x == '0':
+         print('Acabou')
+         break
+
+    else:
+        print('\nNão entendi!')
+        input('Tecle [Enter] para continuar.')        

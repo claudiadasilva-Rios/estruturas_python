@@ -1,20 +1,22 @@
-#Programa para imprimir a soma dos numeros fornecidos
+# Loops aninhados
 
-def somar_numeros():
-    soma = 0
+import os
+os.system('cls')
 
-    while True:
-        try:
-            numero = float(input("Digite um número (0 para sair): "))
-        except ValueError:
-            print("Entrada inválida! Digite apenas números.")
-            continue 
-        if numero == 0:
-            break  
+pessoas = [
+    ("Joca", "joca@email.com", "2000-10-14", "Senha@123"),
+    ("Maria", "maria@email.com", "1984-08-08", "Senha@123"),
+    ("Setembrino", "set@brino.com", "1978-12-15", "Senha@123"),
+    ("Hemengarda", "hemen@garda.com", "1982-01-17", "Senha@123"),
+]
 
-        soma += numero 
+# Data de nascimento do Joca
+# print(pessoas[2][2])
 
-    print(f"A soma dos números digitados é: {soma}")
-
-if __name__ == "__main__":
-    somar_numeros()
+for pessoa in pessoas:
+    # Feio
+    # print(pessoa)
+    for dado in pessoa:
+        print('•', dado)
+    print()
+    

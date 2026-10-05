@@ -1,23 +1,38 @@
-# Programa para calcular a soma dos números de 1 a 100
+# Loop while
 
-def soma_com_loop(inicio, fim):
-    soma = 0
-    for numero in range(inicio, fim + 1):
-        soma += numero
-    return soma
+import os
+os.system('cls')
 
-def soma_com_formula(inicio, fim):
-    n = fim - inicio + 1
-    return n * (inicio + fim) // 2 
+while True:
+    os.system('cls')
+    print('''
+    1) Estou com fome
+    2) Estou com sede
+    3) Quero minha mãe
 
-if __name__ == "__main__":
-    inicio = 1
-    fim = 100
+    0) Sair
+    ''')
 
-    # Cálculo com loop
-    soma_loop = soma_com_loop(inicio, fim)
-    print(f"Soma de {inicio} a {fim} (loop): {soma_loop}")
+    x = input("Escolha uma opção: ")
 
-    # Cálculo com fórmula
-    soma_formula = soma_com_formula(inicio, fim)
-    print(f"Soma de {inicio} a {fim} (fórmula): {soma_formula}")
+    match x:
+        case '0':
+            print('\nAcabou')
+
+            # Esse break interrompe o 'while'
+            break
+
+        case '1':
+            print('\nVai comer')
+
+        case '2':
+            print('\nBeba água')
+
+        case '3':
+            print('\nGrite: MAMÃE!!!')
+
+        # Nenhuma das opções acima é válida
+        case _:
+            print('\nNão entendi!')
+
+    input('Tecle [Enter] para continuar.')

@@ -3,7 +3,7 @@
 def mostrar_tabuada(numero: int):
     
     print(f"\nTabuada do {numero}:")
-    for i in range(0, 11):
+    for i in range(1, 101):
         resultado = numero * i
         print(f"{numero} x {i} = {resultado}")
 
